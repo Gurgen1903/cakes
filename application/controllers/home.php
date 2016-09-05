@@ -46,5 +46,18 @@ class Home extends CI_Controller {
         }
 
     }
+    public function all_baby_cakes(){
+        $data['babies_cakes'] = $this->home_model->get_all_baby_cake();
+        $this->load->view('layout/header');
+        $this->load->view('baby_cake_view',$data);
+        $this->load->view('layout/footer');
+    }
+    public function one_product_baby($id)
+    {
+        $data_by_id['your_cake'] = $this->home_model->get_cake_baby_by_id($id);
+        $this->load->view('layout/header');
+        $this->load->view('baby_one_product_view',$data_by_id);
+        $this->load->view('layout/footer');
+    }
 
 }

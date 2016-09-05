@@ -35,9 +35,10 @@
                 </div>
                 <img src="<?=base_url().'uploads/baby/'.$data['img']?>" alt="">
                 <p><?=$data['name']?></p>
-                <p><?=$data['description']?></p>
                 <p><?=$data['kg']?>кг</p>
                 <p><?=$data['price']?> драмм</p>
+                <p><?=$data['description']?></p>
+
             </div>
         <?php endforeach;?>
 

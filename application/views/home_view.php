@@ -6,7 +6,7 @@
                 <ul>
                     <li>
                         <img src="<?=base_url('assecs/image/child_cake.jpg')?>" alt="">
-                        <a href="#">Детские</a>
+                        <a href="<?=base_url('home/all_baby_cakes')?>">Детские</a>
                     </li>
                     <li><img src="<?=base_url('assecs/image/cat_party.jpg')?>" alt="">
                         <a href="#">Торжественные</a></li>

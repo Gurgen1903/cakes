@@ -28,4 +28,12 @@ class Home_model extends CI_Model {
     public function add_new_order_by_id($data){
         $this->db->insert('my_order',$data);
     }
+    public function get_all_baby_cake(){
+        $sql = $this->db->get('baby_cake');
+        return $sql->result_array();
+    }
+    public function get_cake_baby_by_id($id){
+        $sql = $this->db->where('id',$id)->get('baby_cake');
+        return $sql->result_array();
+    }
 }

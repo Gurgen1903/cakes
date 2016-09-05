@@ -328,7 +328,7 @@ input.see_in_new_page{
 
 }
 .hits_of_product_box p {
-    margin: 3px;
+    margin: 5px 0 10px;
 }
 .hits_of_product_box img {
     width: 150px;
