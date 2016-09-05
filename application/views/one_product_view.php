@@ -23,7 +23,6 @@
                             <div class="name_title_one">
                                 <h4><?=$val['name']?></h4>
                             </div>
-                            <p><span class="glvnii">Описание:</span><span class="text_desc">asdasdasdkjakjakjaskjaskjakjaskjasjkaaslkasdkjasdasdasdkjasd </span></p>
                             <p><span class="glvnii">Количество:</span> <span class="text_desc colich"><select required name="zakaz_kol" id="kolic">
                                     <option value="1">1</option>
                                     <option value="2">2</option>

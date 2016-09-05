@@ -74,5 +74,33 @@ class Admin extends CI_Controller {
         $result = $this->admin_model->delete_phone_number($id);
         redirect('admin/call_back_numbers');
     }
+    public function add_baby_cake(){
+        if($this->input->post('insert_baby_cakes_btn')){
+
+            $config['upload_path'] = './uploads/baby/';
+            $config['allowed_types'] = 'jpeg|gif|jpg|png';
+            $config['max_size']	= '10000';
+            $this->load->library('upload', $config);
+            $this->upload->do_upload();
+            $data = array(
+                'name' => $this->input->post('name'),
+                'price' => $this->input->post('price'),
+                'kg' => $this->input->post('weight'),
+                'description' => $this->input->post('description'),
+                'img' => $this->upload->data('file_name'),
+            );
+            $aaa = $this->admin_model->insert_baby_cakes($data);
+            redirect('admin/all_babies_cakes');
+        }
+    }
+    public function all_babies_cakes(){
+        $data['baby_cake'] = $this->admin_model->get_baby_cakes();
+//        echo "<pre>";var_dump($data);die;
+        $this->load->view('admin/baby_cakes_admin',$data);
+    }
+    public function delete_baby_cake_by_id($id){
+        $result = $this->admin_model->delete_cake_babyes($id);
+        redirect('admin/all_babies_cakes');
+    }
 
 }

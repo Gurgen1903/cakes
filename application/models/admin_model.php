@@ -26,4 +26,15 @@ class Admin_model extends CI_Model
     public function delete_phone_number($id){
         $this->db->where('id',$id)->delete('call_back_data');
     }
+    public function insert_baby_cakes($data){
+        $this->db->insert('baby_cake',$data);
+    }
+    public function get_baby_cakes(){
+        $sql = $this->db->get('baby_cake');
+        return $sql->result_array();
+    }
+    public function delete_cake_babyes($id){
+//        var_dump($id);die();
+        $this->db->where('id',$id)->delete('baby_cake');
+    }
 }

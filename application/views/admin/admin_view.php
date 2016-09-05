@@ -15,6 +15,11 @@
     <a href="<?=base_url('admin/insert_new_cake')?>">Insert New Cake</a>
     <a href="<?=base_url('admin/call_back_numbers')?>">Phone Numbers</a>
     <a href="<?=base_url('admin/order_price_list')?>">Orders</a>
+    <a href="<?=base_url('admin/all_babies_cakes')?>">Insert BaBies cakes</a>
+    <a href="<?=base_url('admin/order_price_list')?>">Insert Wedding cakes</a>
+    <a href="<?=base_url('admin/order_price_list')?>">Insert Gala cakes</a>
+    <a href="<?=base_url('admin/order_price_list')?>">Insert For Every Day cakes</a>
+    <a href="<?=base_url('admin/order_price_list')?>">Insert Mastics cakes</a>
 </div>
 
 

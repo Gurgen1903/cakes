@@ -19,7 +19,7 @@
             <div class="boxes">
                 <div class="box1">
                     <div class="logo">
-                        <a href="#"><img src="<?=base_url('assecs/image/logo.png')?>" alt="">
+                        <a href="<?=base_url('home')?>"><img src="<?=base_url('assecs/image/logo.png')?>" alt="">
                             Торты на любой вкус!
                         </a>
                     </div>

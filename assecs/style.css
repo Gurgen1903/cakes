@@ -336,9 +336,9 @@ input.see_in_new_page{
     /*height: 130px;*/
 }
 .all_members_admin{
-    width: 60%;
+    width: 95%;
     margin: 0 auto;
-    text-align: center;
+    /*text-align: center;*/
     padding-top: 15px;
 }
 .all_members_admin a{
@@ -347,7 +347,8 @@ input.see_in_new_page{
     display: inline-block;
     background-color: red;
     padding: 5px 25px;
-    margin: 0 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
     -webkit-border-radius:8px;
     -moz-border-radius:8px;
     border-radius:8px;
@@ -506,7 +507,7 @@ input.see_in_new_page{
 }
 .title_zakaz_modal{
     text-align: center;
-    font-size: 22px;
+    font-size: 35px;
     font-weight: 600;
 }
 .zakaz_modal_header {
@@ -674,4 +675,12 @@ input.see_in_new_page{
     color: #000000;
     font-size: 17px;
     font-weight: 600;
+}
+.insert_baby_title h3{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.form_baby_cakes form input {
+    display: block;
+    margin: 10px 15px;
 }
