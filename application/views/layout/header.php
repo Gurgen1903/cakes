@@ -27,7 +27,7 @@
                 <div class="box2">
                     <div class="phone_number">
                         <p>+(374)98 40-90-88</p>
-                        <a href="#"><img src="<?=base_url('assecs/image/facebook_icon.png')?>" alt=""></a>
+                        <a href="https://www.facebook.com/gugo.egiazaryan" target="_blank"><img src="<?=base_url('assecs/image/facebook_icon.png')?>" alt=""></a>
                         <a href="#"><img src="<?=base_url('assecs/image/instagram_icon.png')?>" alt=""></a>
                     </div>
                 </div>
