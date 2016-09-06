@@ -74,6 +74,9 @@ class Admin extends CI_Controller {
         $result = $this->admin_model->delete_phone_number($id);
         redirect('admin/call_back_numbers');
     }
+
+//    BABY INSERT DELETE SELECT
+
     public function add_baby_cake(){
         if($this->input->post('insert_baby_cakes_btn')){
 
@@ -101,6 +104,38 @@ class Admin extends CI_Controller {
     public function delete_baby_cake_by_id($id){
         $result = $this->admin_model->delete_cake_babyes($id);
         redirect('admin/all_babies_cakes');
+    }
+
+
+//    WEDDING INSERT DELETE SELECT
+
+    public function add_wedding_cake(){
+        if($this->input->post('insert_wedding_cakes_btn')){
+
+            $config['upload_path'] = './uploads/wedding/';
+            $config['allowed_types'] = 'jpeg|gif|jpg|png';
+            $config['max_size']	= '10000';
+            $this->load->library('upload', $config);
+            $this->upload->do_upload();
+            $data = array(
+                'name' => $this->input->post('name'),
+                'price' => $this->input->post('price'),
+                'kg' => $this->input->post('weight'),
+                'description' => $this->input->post('description'),
+                'img' => $this->upload->data('file_name'),
+            );
+            $aaa = $this->admin_model->insert_wedding_cakes($data);
+            redirect('admin/all_wedding_cakes');
+        }
+    }
+    public function all_wedding_cakes(){
+        $data['wedding_cake'] = $this->admin_model->get_wedding_cakes();
+//        echo "<pre>";var_dump($data);die;
+        $this->load->view('admin/wedding_cakes_admin',$data);
+    }
+    public function delete_wedding_cake_by_id($id){
+        $result = $this->admin_model->delete_cake_weddings($id);
+        redirect('admin/all_wedding_cakes');
     }
 
 }

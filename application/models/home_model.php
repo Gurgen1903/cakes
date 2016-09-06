@@ -28,6 +28,9 @@ class Home_model extends CI_Model {
     public function add_new_order_by_id($data){
         $this->db->insert('my_order',$data);
     }
+
+//  BABY GET CAKE
+
     public function get_all_baby_cake(){
         $sql = $this->db->get('baby_cake');
         return $sql->result_array();
@@ -36,4 +39,16 @@ class Home_model extends CI_Model {
         $sql = $this->db->where('id',$id)->get('baby_cake');
         return $sql->result_array();
     }
+
+//  WEDDING GET CAKE
+
+    public function get_all_wedding_cake(){
+        $sql = $this->db->get('wedding_cake');
+        return $sql->result_array();
+    }
+    public function get_cake_wedding_by_id($id){
+        $sql = $this->db->where('id',$id)->get('wedding_cake');
+        return $sql->result_array();
+    }
+
 }

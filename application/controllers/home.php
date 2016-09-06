@@ -60,4 +60,20 @@ class Home extends CI_Controller {
         $this->load->view('layout/footer');
     }
 
+//    GET WEDDING
+
+    public function all_wedding_cakes(){
+        $data['wedding_cakes'] = $this->home_model->get_all_wedding_cake();
+        $this->load->view('layout/header');
+        $this->load->view('wedding_cake_view',$data);
+        $this->load->view('layout/footer');
+    }
+    public function one_product_wedding($id)
+    {
+        $data_by_id['your_cake'] = $this->home_model->get_cake_wedding_by_id($id);
+        $this->load->view('layout/header');
+        $this->load->view('wedding_one_product_view',$data_by_id);
+        $this->load->view('layout/footer');
+    }
+
 }

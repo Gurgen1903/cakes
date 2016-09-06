@@ -12,7 +12,7 @@
                         <a href="#">Торжественные</a></li>
                     <li>
                         <img src="<?=base_url('assecs/image/cat_wedding.jpg')?>" alt="">
-                        <a href="#">Свадебные</a></li>
+                        <a href="<?=base_url('home/all_wedding_cakes')?>">Свадебные</a></li>
                     </li>
                     <li>
                         <img src="<?=base_url('assecs/image/for_everyday_cake.jpg')?>" alt="">

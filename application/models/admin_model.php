@@ -37,4 +37,16 @@ class Admin_model extends CI_Model
 //        var_dump($id);die();
         $this->db->where('id',$id)->delete('baby_cake');
     }
+    public function insert_wedding_cakes($data){
+        $this->db->insert('wedding_cake',$data);
+    }
+    public function get_wedding_cakes(){
+        $sql = $this->db->get('wedding_cake');
+        return $sql->result_array();
+    }
+    public function delete_cake_weddings($id){
+//        var_dump($id);die();
+        $this->db->where('id',$id)->delete('wedding_cake');
+    }
+
 }
