@@ -138,4 +138,38 @@ class Admin extends CI_Controller {
         redirect('admin/all_wedding_cakes');
     }
 
+
+//    For EVERY DAY INSERT DELETE SELECT
+
+    public function add_every_day_cake(){
+        if($this->input->post('insert_every_day_cakes_btn')){
+
+            $config['upload_path'] = './uploads/every_day/';
+            $config['allowed_types'] = 'jpeg|gif|jpg|png';
+            $config['max_size']	= '10000';
+            $this->load->library('upload', $config);
+            $this->upload->do_upload();
+            $data = array(
+                'name' => $this->input->post('name'),
+                'price' => $this->input->post('price'),
+                'kg' => $this->input->post('weight'),
+                'description' => $this->input->post('description'),
+                'img' => $this->upload->data('file_name'),
+            );
+            $aaa = $this->admin_model->insert_every_day_cakes($data);
+            redirect('admin/all_every_day_cakes');
+        }
+    }
+    public function all_every_day_cakes(){
+        $data['every_day_cake'] = $this->admin_model->get_every_day_cakes();
+//        echo "<pre>";var_dump($data);die;
+        $this->load->view('admin/every_day_cakes_admin',$data);
+    }
+    public function delete_every_day_cake_by_id($id){
+        $result = $this->admin_model->delete_cake_every_day($id);
+        redirect('admin/all_every_day_cakes');
+    }
+
+
+
 }

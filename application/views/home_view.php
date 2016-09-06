@@ -16,7 +16,7 @@
                     </li>
                     <li>
                         <img src="<?=base_url('assecs/image/for_everyday_cake.jpg')?>" alt="">
-                        <a href="#">На каждый день</a></li>
+                        <a href="<?=base_url('home/all_every_day_cakes')?>">На каждый день</a></li>
                     </li>
                     <li>
                         <img src="<?=base_url('assecs/image/cat_mastik.jpg')?>" alt="">

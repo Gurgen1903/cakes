@@ -76,4 +76,20 @@ class Home extends CI_Controller {
         $this->load->view('layout/footer');
     }
 
+//    GET EVERY DAY
+
+    public function all_every_day_cakes(){
+        $data['every_day_cakes'] = $this->home_model->get_all_every_day_cake();
+        $this->load->view('layout/header');
+        $this->load->view('every_day_cake_view',$data);
+        $this->load->view('layout/footer');
+    }
+    public function one_product_every_day($id)
+    {
+        $data_by_id['your_cake'] = $this->home_model->get_cake_every_day_by_id($id);
+        $this->load->view('layout/header');
+        $this->load->view('every_day_one_product_view',$data_by_id);
+        $this->load->view('layout/footer');
+    }
+
 }

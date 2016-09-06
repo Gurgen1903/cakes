@@ -688,3 +688,7 @@ input.see_in_new_page{
     display: block;
     margin: 10px 15px;
 }
+.form_every_day_cakes form input {
+    display: block;
+    margin: 10px 15px;
+}
