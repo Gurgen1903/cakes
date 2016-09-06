@@ -55,6 +55,7 @@ class Home extends CI_Controller {
     public function one_product_baby($id)
     {
         $data_by_id['your_cake'] = $this->home_model->get_cake_baby_by_id($id);
+        $data_by_id['table_img'] = 'baby_cake';
         $this->load->view('layout/header');
         $this->load->view('baby_one_product_view',$data_by_id);
         $this->load->view('layout/footer');
@@ -71,6 +72,7 @@ class Home extends CI_Controller {
     public function one_product_wedding($id)
     {
         $data_by_id['your_cake'] = $this->home_model->get_cake_wedding_by_id($id);
+        $data_by_id['table_img'] = 'wedding_cake';
         $this->load->view('layout/header');
         $this->load->view('wedding_one_product_view',$data_by_id);
         $this->load->view('layout/footer');
@@ -87,8 +89,26 @@ class Home extends CI_Controller {
     public function one_product_every_day($id)
     {
         $data_by_id['your_cake'] = $this->home_model->get_cake_every_day_by_id($id);
+        $data_by_id['table_img'] = 'every_day_cake';
         $this->load->view('layout/header');
         $this->load->view('every_day_one_product_view',$data_by_id);
+        $this->load->view('layout/footer');
+    }
+
+//    GALA DAY
+
+    public function all_gala_cakes(){
+        $data['gala_cakes'] = $this->home_model->get_all_gala_cake();
+        $this->load->view('layout/header');
+        $this->load->view('gala_cake_view',$data);
+        $this->load->view('layout/footer');
+    }
+    public function one_product_gala($id)
+    {
+        $data_by_id['your_cake'] = $this->home_model->get_cake_gala_by_id($id);
+        $data_by_id['table_img'] = 'gala_cake';
+        $this->load->view('layout/header');
+        $this->load->view('gala_one_product_view',$data_by_id);
         $this->load->view('layout/footer');
     }
 

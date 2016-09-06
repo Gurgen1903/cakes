@@ -40,6 +40,7 @@ $(document).ready(function () {
             url: $('.base_cake_zakaz').val(),
             data: {
               'cake_id': $('.id_cake_zakaz').val(),
+              'table_name': $('.one_product_form').data('table_name'),
               'amount_cake': $('#kolic').val(),
               'cake_weight': $('#kilogram').val(),
               'addres_order': $('.one_order_address').val(),
@@ -55,12 +56,16 @@ $(document).ready(function () {
     $(document).on('click','.order_id_by_id', function () {
         var result_json ='';
         var html = '';
+        var file_repoz = $(this).data('table_name');
+        var a = file_repoz.split('_')[0]
+        console.log(a)
         var base_url_img = $(document).find('.input_base_url').val()
         $.ajax({
             type: "POST",
             url: $(this).data('action'),
             data: {
                 'cake_id': $(this).text(),
+                'table_name': $(this).data('table_name'),
             },
             success: function(result){
                 // $.each(result,function(index,val){
@@ -69,7 +74,7 @@ $(document).ready(function () {
                 $('.modal_cake_by_id_all').empty();
                 result_json = JSON.parse(result);
                 console.log(result_json)
-                html += '<img src='+base_url_img+'uploads/'+result_json.img+'>\n\
+                html += '<img src='+base_url_img+'uploads/'+a+'/'+result_json.img+'>\n\
                          <p>'+'Name:'+result_json.name+'</p>\n\
                          <p>'+'Price:'+result_json.price+'</p>\n\
                          <p>'+'Weight:'+result_json.kg+'</p>\n\

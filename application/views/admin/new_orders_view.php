@@ -24,7 +24,7 @@
     <?php foreach ($orders as $val):?>
         <div class="all_order_this_day">
             <input class="input_base_url" type="hidden" value="<?=base_url()?>">
-            <span>Cake_id:</span><a href="#" data-action ="<?=base_url('/admin/order_cake_data_by_id')?>" class="order_id_by_id"><?=$val['cake_id']?></a>
+            <span>Cake_id:</span><a href="#" data-action ="<?=base_url('/admin/order_cake_data_by_id')?>" data-file="" data-table_name="<?=$val['table_name']?>" class="order_id_by_id"><?=$val['cake_id']?></a>
             <p><span>Time:</span> <?=$val['created_at']?></p>
             <p><span>Amount:</span> <?=$val['id']?></p>
             <p><span>Weight:</span> <?=$val['cake_weight']?></p>

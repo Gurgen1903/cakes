@@ -17,7 +17,7 @@
 
                     </div>
                     <div class="zakaz_box_right">
-                        <form action="" method="POST" class="one_product_form">
+                        <form action="" method="POST" class="one_product_form" data-table_name="<?=$table_img?>">
                             <input type="hidden" class="id_cake_zakaz" value="<?=$val['id']?>">
                             <input type="hidden" class="base_cake_zakaz" value="<?=base_url('home/order_cake_one')?>">
                             <div class="name_title_one">

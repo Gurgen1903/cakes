@@ -61,4 +61,16 @@ class Home_model extends CI_Model {
         $sql = $this->db->where('id',$id)->get('every_day_cake');
         return $sql->result_array();
     }
+
+    //    GALA GET CAKE
+
+    public function get_all_gala_cake(){
+        $sql = $this->db->get('gala_cake');
+        return $sql->result_array();
+    }
+    public function get_cake_gala_by_id($id){
+        $sql = $this->db->where('id',$id)->get('gala_cake');
+        return $sql->result_array();
+    }
+
 }

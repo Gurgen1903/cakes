@@ -9,7 +9,7 @@
                         <a href="<?=base_url('home/all_baby_cakes')?>">Детские</a>
                     </li>
                     <li><img src="<?=base_url('assecs/image/cat_party.jpg')?>" alt="">
-                        <a href="#">Торжественные</a></li>
+                        <a href="<?=base_url('home/all_gala_cakes')?>">Торжественные</a></li>
                     <li>
                         <img src="<?=base_url('assecs/image/cat_wedding.jpg')?>" alt="">
                         <a href="<?=base_url('home/all_wedding_cakes')?>">Свадебные</a></li>

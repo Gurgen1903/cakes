@@ -11,10 +11,9 @@
             <div class="modal-body zakaz_body_modal">
                 <div class="zakaz_box_modal">
                     <div class="zakaz_box_left">
-                        <img src="<?=base_url().'uploads/baby/'.$val['img']?>" alt="">
+                        <img src="<?=base_url().'uploads/gala/'.$val['img']?>" alt="">
                     </div>
                     <div class="zakaz_middle_modal">
-
                     </div>
                     <div class="zakaz_box_right">
                         <form action="" method="POST" class="one_product_form" data-table_name="<?=$table_img?>">

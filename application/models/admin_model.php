@@ -12,7 +12,7 @@ class Admin_model extends CI_Model
         $this->db->insert('all_product',$data);
     }
     public function new_cakes($id){
-        $sql = $this->db->where('id',$id)->get('all_product');
+        $sql = $this->db->where('id',$id['cake_id'])->get($id['table_name']);
         return $sql->result_array();
     }
     public function get_call_back_data(){
@@ -67,5 +67,19 @@ class Admin_model extends CI_Model
     public function delete_cake_every_day($id){
         $this->db->where('id',$id)->delete('every_day_cake');
     }
+
+    //    GALA MODEL
+
+    public function insert_gala_cakes($data){
+        $this->db->insert('gala_cake',$data);
+    }
+    public function get_gala_cakes(){
+        $sql = $this->db->get('gala_cake');
+        return $sql->result_array();
+    }
+    public function delete_cake_gala($id){
+        $this->db->where('id',$id)->delete('gala_cake');
+    }
+
 
 }

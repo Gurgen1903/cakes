@@ -65,7 +65,7 @@ class Admin extends CI_Controller {
     }
     public function order_cake_data_by_id(){
         if($this->input->is_ajax_request()){
-            $data = $this->input->post('cake_id');
+            $data = $this->input->post();
             $result = $this->admin_model->new_cakes($data);
             echo json_encode($result[0]);exit();
         }
@@ -170,6 +170,36 @@ class Admin extends CI_Controller {
         redirect('admin/all_every_day_cakes');
     }
 
+
+    //    For GALA INSERT DELETE SELECT
+
+    public function add_gala_cake(){
+        if($this->input->post('insert_gala_cakes_btn')){
+
+            $config['upload_path'] = './uploads/gala/';
+            $config['allowed_types'] = 'jpeg|gif|jpg|png';
+            $config['max_size']	= '10000';
+            $this->load->library('upload', $config);
+            $this->upload->do_upload();
+            $data = array(
+                'name' => $this->input->post('name'),
+                'price' => $this->input->post('price'),
+                'kg' => $this->input->post('weight'),
+                'description' => $this->input->post('description'),
+                'img' => $this->upload->data('file_name'),
+            );
+            $aaa = $this->admin_model->insert_gala_cakes($data);
+            redirect('admin/all_gala_cakes');
+        }
+    }
+    public function all_gala_cakes(){
+        $data['gala_cake'] = $this->admin_model->get_gala_cakes();
+        $this->load->view('admin/gala_cakes_admin',$data);
+    }
+    public function delete_gala_cake_by_id($id){
+        $result = $this->admin_model->delete_cake_gala($id);
+        redirect('admin/all_gala_cakes');
+    }
 
 
 }
