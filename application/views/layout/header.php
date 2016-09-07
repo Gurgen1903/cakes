@@ -56,6 +56,7 @@
         </div>
     </header>
     <div class="description_header">
+        <div class="cont">
         <ul>
             <li>
                 <p>Всё по честному</p>
@@ -77,14 +78,17 @@
             </li>
         </ul>
     </div>
+    </div>
     <div class="header_menu">
+    <div class="cont">
 
         <ul>
             <li><a href="<?=base_url('home')?>">Главная</a></li>
-            <li><a href="#">Каталог тортов</a></li>
+            <li><a href="<?=base_url('home/katalog_data')?>">Каталог тортов</a></li>
             <li><a href="#">Оплата и Доставка</a></li>
             <li><a href="#">Контакты</a></li>
         </ul>
+    </div>
     </div>
     <!--    <div class="header_fixed_choose">-->
     <!--        TORT-->

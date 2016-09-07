@@ -19,7 +19,7 @@
     <a href="<?=base_url('admin/all_wedding_cakes')?>">Insert Wedding cakes</a>
     <a href="<?=base_url('admin/all_gala_cakes')?>">Insert Gala cakes</a>
     <a href="<?=base_url('admin/all_every_day_cakes')?>">Insert For Every Day cakes</a>
-    <a href="<?=base_url('admin/order_price_list')?>">Insert Mastics cakes</a>
+    <a href="<?=base_url('admin/all_mastik_cakes')?>">Insert Mastics cakes</a>
 </div>
 
 

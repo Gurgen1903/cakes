@@ -112,4 +112,52 @@ class Home extends CI_Controller {
         $this->load->view('layout/footer');
     }
 
+
+    //    MASTIK DAY
+
+    public function all_mastik_cakes(){
+        $data['mastik_cakes'] = $this->home_model->get_all_mastik_cake();
+        $this->load->view('layout/header');
+        $this->load->view('mastik_cake_view',$data);
+        $this->load->view('layout/footer');
+    }
+    public function one_product_mastik($id)
+    {
+        $data_by_id['your_cake'] = $this->home_model->get_cake_mastik_by_id($id);
+        $data_by_id['table_img'] = 'mastik_cake';
+        $this->load->view('layout/header');
+        $this->load->view('mastik_one_product_view',$data_by_id);
+        $this->load->view('layout/footer');
+    }
+
+    //KATALOG
+    public function katalog_data(){
+        $data['data_baby'] = $this->baby_catalog_img();
+        $data['data_every_day'] = $this->every_day_catalog_img();
+        $data['data_gala'] = $this->gala_catalog_img();
+        $data['data_wedding'] = $this->wedding_catalog_img();
+        $data['data_mastik'] = $this->mastik_catalog_img();
+        $this->load->view('layout/header');
+        $this->load->view('katalog_view',$data);
+        $this->load->view('layout/footer');
+    }
+
+    // BABY KATALOG
+    public function baby_catalog_img(){
+        return  $this->home_model->get_img_baby_cake();
+    }
+    public function every_day_catalog_img(){
+        return  $this->home_model->get_img_every_day_cake();
+    }
+    public function gala_catalog_img(){
+        return $this->home_model->get_img_gala_cake();
+    }
+    public function wedding_catalog_img(){
+        return $this->home_model->get_img_wedding_cake();
+    }
+    public function mastik_catalog_img(){
+        return $this->home_model->get_img_mastik_cake();
+    }
+
+
 }

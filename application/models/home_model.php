@@ -73,4 +73,43 @@ class Home_model extends CI_Model {
         return $sql->result_array();
     }
 
+
+
+    //    MASTIK GET CAKE
+
+    public function get_all_mastik_cake(){
+        $sql = $this->db->get('mastik_cake');
+        return $sql->result_array();
+    }
+    public function get_cake_mastik_by_id($id){
+        $sql = $this->db->where('id',$id)->get('mastik_cake');
+        return $sql->result_array();
+    }
+
+    // KATALOG SELECT RANDOM
+
+    public function get_img_baby_cake(){
+        $sql = $this->db->limit(9)->order_by('img','random')->get('baby_cake');
+//        echo "<pre>";
+//        var_dump($sql->result_array());die;
+        return $sql->result_array();
+    }
+    public function get_img_every_day_cake(){
+        $sql = $this->db->limit(9)->order_by('id','RANDOM')->get('every_day_cake');
+        return $sql->result_array();
+    }
+    public function get_img_gala_cake(){
+        $sql = $this->db->limit(9)->order_by('id','RANDOM')->get('gala_cake');
+        return $sql->result_array();
+    }
+    public function get_img_wedding_cake(){
+        $sql = $this->db->limit(9)->order_by('id','RANDOM')->get('wedding_cake');
+        return $sql->result_array();
+    }
+    public function get_img_mastik_cake(){
+        $sql = $this->db->limit(9)->order_by('id','RANDOM')->get('mastik_cake');
+        return $sql->result_array();
+    }
+
+
 }

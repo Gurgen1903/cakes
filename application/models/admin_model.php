@@ -82,4 +82,17 @@ class Admin_model extends CI_Model
     }
 
 
+    //    MASTIK MODEL
+
+    public function insert_mastik_cakes($data){
+        $this->db->insert('mastik_cake',$data);
+    }
+    public function get_mastik_cakes(){
+        $sql = $this->db->get('mastik_cake');
+        return $sql->result_array();
+    }
+    public function delete_cake_mastik($id){
+        $this->db->where('id',$id)->delete('mastik_cake');
+    }
+
 }

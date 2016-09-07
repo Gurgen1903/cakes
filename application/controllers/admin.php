@@ -202,4 +202,36 @@ class Admin extends CI_Controller {
     }
 
 
+    //    For MASTIK INSERT DELETE SELECT
+
+    public function add_mastik_cake(){
+        if($this->input->post('insert_mastik_cakes_btn')){
+
+            $config['upload_path'] = './uploads/mastik/';
+            $config['allowed_types'] = 'jpeg|gif|jpg|png';
+            $config['max_size']	= '10000';
+            $this->load->library('upload', $config);
+            $this->upload->do_upload();
+            $data = array(
+                'name' => $this->input->post('name'),
+                'price' => $this->input->post('price'),
+                'kg' => $this->input->post('weight'),
+                'description' => $this->input->post('description'),
+                'img' => $this->upload->data('file_name'),
+            );
+            $aaa = $this->admin_model->insert_mastik_cakes($data);
+            redirect('admin/all_mastik_cakes');
+        }
+    }
+    public function all_mastik_cakes(){
+        $data['mastik_cake'] = $this->admin_model->get_mastik_cakes();
+        $this->load->view('admin/mastik_cakes_admin',$data);
+    }
+    public function delete_mastik_cake_by_id($id){
+        $result = $this->admin_model->delete_cake_mastik($id);
+        redirect('admin/all_mastik_cakes');
+    }
+
+
+
 }

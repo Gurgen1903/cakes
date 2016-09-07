@@ -20,7 +20,7 @@
                     </li>
                     <li>
                         <img src="<?=base_url('assecs/image/cat_mastik.jpg')?>" alt="">
-                        <a href="#">Из мастики</a></li>
+                        <a href="<?=base_url('home/all_mastik_cakes')?>">Из мастики</a></li>
                     </li>
                     <li></li>
                 </ul>

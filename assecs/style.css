@@ -115,14 +115,14 @@ header{
     background-color: #F2EABA;
 }
 .header_menu ul {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    padding: 15px 0 15px 15px;
+    padding: 15px 0;
 }
 .header_menu ul li{
     float: left;
-    margin-left: 60px;
+    margin-left: 75px;
     padding-left: 12px;
     background: url("image/circle_menu.png") left center no-repeat;
     list-style:none;
@@ -132,6 +132,11 @@ header{
     font-style: italic;
     font-weight: 600;
     color: #3D0017;
+}
+.katalog_view{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 .header_fixed_choose{
     position: fixed;
@@ -144,7 +149,8 @@ header{
 }
 .description_header ul {
     overflow: hidden;
-    width: 80%;
+    width: 100%;
+    padding-left: 0;
     margin: 0 auto;
     padding-bottom: 15px;
     padding-top: 15px;
@@ -154,7 +160,7 @@ header{
     float: left;
     list-style-type: none;
     background: none;
-    padding-left: 25px;
+    /*padding-left: 25px;*/
     margin: 0;
 }
 .description_header ul li :first-child{
@@ -304,6 +310,7 @@ footer{
     cursor: pointer;
 }
 .hits_of_product_box{
+    /*height: 320px;*/
     float: left;
     padding: 10px 0;
     position: relative;
@@ -333,7 +340,7 @@ input.see_in_new_page{
 .hits_of_product_box img {
     width: 150px;
     max-width: 100%;
-    /*height: 130px;*/
+    height: 145px;
 }
 .all_members_admin{
     width: 95%;
@@ -696,4 +703,124 @@ input.see_in_new_page{
 .modal_cake_by_id_all img{
     width: 250px;
     height: auto;
+}
+
+.katalog_items .katalog_box .katalog_box_right img{
+    width: 100px;
+    max-width: 100%;
+    height: 90px;
+    /*padding: 3px 1px;*/
+    margin: 5px;
+}
+.katalog_items{
+    overflow: hidden;
+}
+.paral_baby{
+    background: url("image/baby_paralax.jpg");
+    background-attachment: fixed;
+    margin-top: -20px;
+    padding-top: 20px;
+}
+.gala_paralax{
+    background: url("image/gala_paralax.jpg");
+    background-attachment: fixed;
+    margin-top: -20px;
+    padding-top: 20px;
+}
+.wedding_paralax{
+    background: url("image/wedding_paralax.jpg");
+    background-attachment: fixed;
+    margin-top: -20px;
+    padding-top: 20px;
+}
+.mastik_paralax{
+    background: url("image/wedding_paralax.jpg");
+    background-attachment: fixed;
+    margin-top: -20px;
+    padding-top: 20px;
+}
+.every_day_paralax{
+    background: url("image/every_day_paralax.jpg");
+    background-attachment: fixed;
+    margin-top: -20px;
+    padding-top: 20px;
+}
+.katalog_box{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom: 2px solid #3D0017;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.katalog_box_left{
+    float: left;
+    width: 28%;
+    padding-top: 120px;
+    text-align: center;
+}
+.katalog_box_left a{
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    color: #3D0017;
+    background-color: #ffffff;
+    border: 3px solid #3D0017;
+    padding: 5px 0;
+    position: relative;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.katalog_box_left a:hover {
+    text-decoration: none;
+    background-color: #7A3D54;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+}
+.katalog_box_left a:hover:before {
+    position: absolute;
+    z-index: -10;
+    top: calc(50% - 21px);
+    right: -25px;
+    content: '';
+    border-style: solid;
+    border-width: 19px 0px 21px 21px;
+    border-color: transparent transparent transparent #7A3D54;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -webkit-transition-property: right;
+    transition-property: right;
+
+}
+.zoom_katalog {
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+}
+.zoom_katalog:hover,
+.zoom_katalog:active,
+.zoom_katalog:focus {
+    /**adjust scale to desired size,
+    add browser prefixes**/
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    position:relative;
+}
+.katalog_box_right{
+    width: 50%;
+    text-align: center;
+    float: right;
 }
